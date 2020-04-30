@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fcaProduction.ControllerProcessSheetsList">
+   <children>
+      <VBox prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <GridPane prefHeight="330.0" prefWidth="1100.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="10.0" prefWidth="73.4" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="153.0" minWidth="6.0" prefWidth="8.4666748046875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="290.0" minWidth="10.0" prefWidth="217.53332519531253" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="147.60000610351562" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="371.0" minWidth="10.0" prefWidth="225.46660156250005" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="350.0" minWidth="10.0" prefWidth="144.06667480468752" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="245.0" minWidth="10.0" prefWidth="140.33332519531245" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="5.0" minHeight="10.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="75.99999618530273" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="5.0" minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Process sheet creation date from:" GridPane.columnIndex="2" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <DatePicker fx:id="processSheetsListDateFrom" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin></DatePicker>
+                  <Label text="Process sheet creation date to:" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <padding>
+                        <Insets right="5.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin></Label>
+                  <DatePicker fx:id="processSheetListDateTo" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets bottom="10.0" />
+                     </GridPane.margin></DatePicker>
+                  <TextField fx:id="textFielProcessSheetsListLotNumber" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                  <Button fx:id="btnCheckProcessSheetsList" mnemonicParsing="false" onAction="#btnCheckProcessSheetsList" prefHeight="25.0" prefWidth="125.0" text="Search" GridPane.columnIndex="5" GridPane.rowIndex="9">
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin></Button>
+                  <ComboBox fx:id="comboBoxProcessSheetsListStatus" prefHeight="26.0" prefWidth="197.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+                  <ComboBox fx:id="comboBoxProcessSheetsListCircuitName" prefHeight="26.0" prefWidth="170.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="260.0" text="LOT number:  " GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="241.0" text="Process sheet status:  " GridPane.columnIndex="2" GridPane.rowIndex="7">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="18.0" prefWidth="232.0" text="Circuit name:  " GridPane.columnIndex="2" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </GridPane>
+            <TableView fx:id="tabProcessSheetsList" prefHeight="491.0" prefWidth="941.0" tableMenuButtonVisible="true">
+              <columns>
+                <TableColumn fx:id="columnNameDatabaseKey" prefWidth="38.19997864961624" text="Lp" />
+                  <TableColumn fx:id="columnNameBoxCode" prefWidth="121.0" text="Box code" />
+                  <TableColumn fx:id="columnNameDate" prefWidth="91.0" text="Date" />
+                  <TableColumn fx:id="columnNameTime" prefWidth="79.0" text="Time" />
+                  <TableColumn fx:id="columnNameOperator" prefWidth="209.0" text="Operator" />
+                  <TableColumn fx:id="columnNameAmount" prefWidth="60.0" text="Amount" />
+                  <TableColumn fx:id="columnNameLot" prefWidth="90.0" text="Lot" />
+                  <TableColumn fx:id="columnNameCircuit" prefWidth="73.0" text="Circuit" />
+                  <TableColumn fx:id="columnNameMachine" prefWidth="180.0" text="Machine" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" />
+               </VBox.margin>
+            </TableView>
+            <HBox prefHeight="18.0" prefWidth="1100.0">
+               <children>
+                  <Button fx:id="buttonExportDataToExcelFile" mnemonicParsing="false" onAction="#functionExportProcessSheetsListToExcelFile" prefHeight="25.0" prefWidth="164.0" text="Export data to excel file">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="750.0" top="10.0" />
+                     </HBox.margin></Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</StackPane>
